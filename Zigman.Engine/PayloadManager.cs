@@ -5,7 +5,7 @@ public static class PayloadManager
     /// <summary>
     /// Thread/queue pair
     /// </summary>
-    private class ThreadQueuePair
+    public class ThreadQueuePair
     {
         /// <summary>
         /// Thread
@@ -26,7 +26,7 @@ public static class PayloadManager
     /// <summary>
     /// All pairs
     /// </summary>
-    private static volatile List<ThreadQueuePair> _pairs = new();
+    public static volatile List<ThreadQueuePair> Pairs = new();
 
     /// <summary>
     /// Is initialized
@@ -43,15 +43,15 @@ public static class PayloadManager
     /// </summary>
     private static void CreateThreadQueuePair()
     {
-        var id = _pairs.Count;
+        var id = Pairs.Count;
         var pair = new ThreadQueuePair {
             Index = id,
             Thread = new Thread(() => {
                 while (_isInitialized) {
-                    var pair = _pairs[id];
+                    var pair = Pairs[id];
                     if (pair.Actions.Count == 0) {
                         Thread.Sleep(200);
-                    } else lock (_pairs[id].Actions) {
+                    } else lock (Pairs[id].Actions) {
                         foreach (var t in pair.Actions) {
                             try { t(); }
                             catch (Exception e) { Console.WriteLine($"[Thread {id}] Exception occured: {e}"); }
@@ -62,8 +62,8 @@ public static class PayloadManager
                 Interlocked.Increment(ref _threadsStopped);
             })
         };
-        _pairs.Add(pair);
-        _pairs[id].Thread.Start();
+        Pairs.Add(pair);
+        Pairs[id].Thread.Start();
         Console.WriteLine($"[CreateThreadQueuePair] Created a new thread at index {id}");
     }
 
@@ -93,7 +93,7 @@ public static class PayloadManager
     {
         if (!_isInitialized)
             throw new Exception("Payload manager not initialized yet!");
-        var ordered = _pairs.OrderBy(x => x.Actions.Count).ToList();
+        var ordered = Pairs.OrderBy(x => x.Actions.Count).ToList();
         lock (ordered[0].Actions) {
             ordered[0].Actions.Add(action);
             Console.WriteLine($"[AddAction] [Thread {ordered[0].Index}] {ordered[0].Actions.Count} enqueued in total");
@@ -107,8 +107,8 @@ public static class PayloadManager
     {
         Console.WriteLine($"[Uninitialize] Stopping all threads...");
         _isInitialized = false;
-        while (_threadsStopped != _pairs.Count) { }
-        _pairs.Clear();
+        while (_threadsStopped != Pairs.Count) { }
+        Pairs.Clear();
         Console.WriteLine($"[Uninitialize] Done!");
     }
 }

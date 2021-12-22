@@ -394,13 +394,39 @@ public class Imports
     public static extern bool GetCursorPos(out Point lpPoint);
 
     /// <summary>
-    /// Play a beep sound
+    /// Play a Windows sound
     /// </summary>
     /// <param name="type">Sound type</param>
     /// <returns>Success or not</returns>
     [return: MarshalAs(UnmanagedType.Bool)]
     [DllImport("user32.dll")]
     public static extern bool MessageBeep(uint type);
+    
+    /// <summary>
+    /// Get console window
+    /// </summary>
+    /// <returns>Window</returns>
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr GetConsoleWindow();
+
+    /// <summary>
+    /// Show/hide window
+    /// </summary>
+    /// <param name="hWnd">Window handle</param>
+    /// <param name="nCmdShow">Command</param>
+    /// <returns>Success or not</returns>
+    [DllImport("user32.dll")]
+    public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+    
+    /// <summary>
+    /// Play a beep sound
+    /// </summary>
+    /// <param name="dwFreq">Frequency</param>
+    /// <param name="dwDuration">Duration</param>
+    /// <returns></returns>
+    [return: MarshalAs(UnmanagedType.Bool)]
+    [DllImport("kernel32.dll")]
+    public static extern bool Beep(long dwFreq, long dwDuration);
 
     /// <summary>
     /// EnumWindows or EnumChildWindows delegate

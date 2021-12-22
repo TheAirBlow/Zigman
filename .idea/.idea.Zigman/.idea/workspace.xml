@@ -8,25 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/amogus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/amogus.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/monke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/wallpaper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/GlobalRandom.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/MbrOverwrite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/PayloadQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Wallpapers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Zigman.Engine.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_amogus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_monke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_wallpaper.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_amogus.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_pablo.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/amogus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/amogus.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/music_amogus.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/monke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +104,9 @@
       <workItem from="1639983303693" duration="6858000" />
       <workItem from="1640015117836" duration="9743000" />
       <workItem from="1640065493689" duration="4336000" />
+      <workItem from="1640072142065" duration="204000" />
+      <workItem from="1640094173218" duration="6087000" />
+      <workItem from="1640106350867" duration="6299000" />
     </task>
     <servers />
   </component>

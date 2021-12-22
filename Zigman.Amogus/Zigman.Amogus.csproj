@@ -24,21 +24,27 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="amogus.wav">
+        <Content Include="assets/img_amogus.png">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
-        <Content Include="amogus.png">
+        <Content Include="assets/img_monke.png">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
-        <Content Include="monke.png">
+        <Content Include="assets/img_wallpaper.jpg">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
-        <Content Include="wallpaper.jpg">
+        <Content Include="assets/music_amogus.wav">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="assets/sfx_amogus.wav">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="assets/sfx_pablo.wav">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="NAudio" Version="2.0.1" />
+      <PackageReference Include="NAudio.WinForms" Version="2.0.1" />
     </ItemGroup>
 </Project>
