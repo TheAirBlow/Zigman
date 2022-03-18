@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Prepare for NuGet">
+    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Make sure there would not be any conflicts on pull">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Zigman/ThreadsManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -121,7 +123,7 @@
       <workItem from="1647455485843" duration="31000" />
       <workItem from="1647512872632" duration="9662000" />
       <workItem from="1647529389424" duration="6181000" />
-      <workItem from="1647581698672" duration="11692000" />
+      <workItem from="1647581698672" duration="12796000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -144,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647591851875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Make sure there would not be any conflicts on pull">
+      <created>1647596425191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647596425191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +179,7 @@
     <MESSAGE value="Halfway done new implementation of Zigman.Engine" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Prepare for NuGet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepare for NuGet" />
+    <MESSAGE value="Make sure there would not be any conflicts on pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make sure there would not be any conflicts on pull" />
   </component>
 </project>
