@@ -7,45 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Update README.md">
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/img_amogus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/img_monke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/img_wallpaper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/music_amogus.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/sfx_amogus.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/assets/sfx_pablo.wav" afterDir="false" />
+    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Prepare for NuGet">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Amogus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Amogus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_amogus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_monke.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_wallpaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/music_amogus.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_amogus.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_pablo.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/AssetsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/AssetsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/GlobalRandom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/GlobalRandom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/Imports.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Imports.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/MbrOverwrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/MbrOverwrite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/Payload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Payload.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/PayloadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/PayloadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/PayloadQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/PayloadQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/Trojan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Trojan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/Wallpapers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Wallpapers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine.Legacy/Zigman.Engine.Legacy.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/TheAirBlow.Zigman.Legacy.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Attributes/PayloadAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/PayloadAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Attributes/UseQueueAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/UseQueueAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Exceptions/IdentifierException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/IdentifierException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Exceptions/InvalidPayloadException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/InvalidPayloadException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Exceptions/QueuePositionException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/QueuePositionException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Exceptions/UnknownErrorException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/UnknownErrorException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Payloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/SafetyLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/SafetyLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/SymbolExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/SymbolExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/ThreadsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Zigman.Engine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +121,7 @@
       <workItem from="1647455485843" duration="31000" />
       <workItem from="1647512872632" duration="9662000" />
       <workItem from="1647529389424" duration="6181000" />
-      <workItem from="1647581698672" duration="9448000" />
+      <workItem from="1647581698672" duration="11692000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -174,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647590015539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Prepare for NuGet">
+      <created>1647591851875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647591851875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +169,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Halfway done new implementation of Zigman.Engine" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Prepare for NuGet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare for NuGet" />
   </component>
 </project>
