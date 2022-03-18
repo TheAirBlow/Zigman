@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NAudio.WinForms" Version="2.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Imports.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="GlobalRandom.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Wallpapers.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="AssetsManager.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="PayloadManager.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="MbrOverwrite.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+      <Compile Update="PayloadQueue.cs">
+        <DependentUpon>Trojan.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

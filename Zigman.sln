@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Engine", "Zigman.Engine\Zigman.Engine.csproj", "{7D6D6FC6-BAA2-4314-A8C6-30A41959FED8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Engine.Legacy", "Zigman.Engine.Legacy\Zigman.Engine.Legacy.csproj", "{7D6D6FC6-BAA2-4314-A8C6-30A41959FED8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Amogus", "Zigman.Amogus\Zigman.Amogus.csproj", "{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Engine", "Zigman.Engine\Zigman.Engine.csproj", "{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

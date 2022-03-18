@@ -8,20 +8,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_amogus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_monke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/img_wallpaper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_amogus.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/sfx_pablo.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Amogus/Amogus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/AssetsManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/Imports.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/Payload.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/PayloadManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/PayloadQueue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/Trojan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/Zigman.Engine.Legacy.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Attributes/PayloadAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Attributes/UseQueueAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Exceptions/IdentifierException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Exceptions/InvalidPayloadException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Exceptions/QueuePositionException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Exceptions/UnknownErrorException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/Payloads.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/SafetyLevel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/SymbolExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zigman.Engine/ThreadsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md.bak" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Zigman.Amogus.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/amogus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/amogus.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Amogus/Assets/music_amogus.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/monke.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Amogus/wallpaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/GlobalRandom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/GlobalRandom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Imports.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/MbrOverwrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/MbrOverwrite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/PayloadManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/PayloadQueue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Wallpapers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine.Legacy/Wallpapers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.Engine/Zigman.Engine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.Engine/Zigman.Engine.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +81,19 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpFileTemplatesSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Zigman.Amogus">
+    <configuration name="Zigman.Amogus Publish" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/publish" target_framework="net6.0-windows" uuid_high="-2588612196477874515" uuid_low="-6269306023176915204" />
+      <method v="2" />
+    </configuration>
     <configuration name="Zigman.Amogus" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/Zigman.Amogus.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -81,11 +103,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net6.0-windows7.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Zigman.Amogus" />
+      <item itemvalue="Publish to folder.Zigman.Amogus Publish" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,6 +133,23 @@
       <workItem from="1640072142065" duration="204000" />
       <workItem from="1640094173218" duration="6087000" />
       <workItem from="1640106350867" duration="6299000" />
+      <workItem from="1640159846122" duration="143000" />
+      <workItem from="1640181485080" duration="12962000" />
+      <workItem from="1640233294391" duration="15186000" />
+      <workItem from="1640333681104" duration="4000" />
+      <workItem from="1640358308402" duration="298000" />
+      <workItem from="1640358926696" duration="3852000" />
+      <workItem from="1640423173818" duration="186000" />
+      <workItem from="1640423686655" duration="3238000" />
+      <workItem from="1647360535688" duration="2549000" />
+      <workItem from="1647413486932" duration="4557000" />
+      <workItem from="1647437970004" duration="6375000" />
+      <workItem from="1647445947542" duration="4298000" />
+      <workItem from="1647451116753" duration="436000" />
+      <workItem from="1647455485843" duration="31000" />
+      <workItem from="1647512872632" duration="9662000" />
+      <workItem from="1647529389424" duration="6181000" />
+      <workItem from="1647581698672" duration="7517000" />
     </task>
     <servers />
   </component>

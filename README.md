@@ -6,7 +6,13 @@ Written in C#. Has a payload manager, payload queue and a lot of P/Invokes.
 This is only for educational purposes. \
 Amogus Trojan will warn you about that it is a trojan. \
 We do not take any responsibilites for trojans, \
-written using Zigman Engine, but without warnings.
+that have patched Zigman.Engine to not show any warnings at all.
+
+## Be aware!
+If any Zigman.Engine based trojan asks you for admin right away \
+without the Zigman.Engine message, stay away from it. \
+If you don't see any Zigman.Engine warnings, \
+you got a modified version of Zigman.Engine.
 
 ## Amogus Trojan
 It is a trojan, that uses Zigman Engine. An example, sort of. \

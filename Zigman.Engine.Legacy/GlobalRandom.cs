@@ -1,14 +1,19 @@
-﻿namespace Zigman.Engine;
+﻿// Copyright © TheAirBlow 2022 <theairblow.help@gmail.com>
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+namespace Zigman.Engine.Legacy;
 
 /// <summary>
 /// Global random
 /// </summary>
-public class GlobalRandom
+public partial class Trojan
 {
     /// <summary>
     /// Random instance
     /// </summary>
-    public static Random Random = new Random();
+    public Random Random = new Random();
     
     /// <summary>
     /// Generate a random string
@@ -16,7 +21,7 @@ public class GlobalRandom
     /// <param name="chars">Charset</param>
     /// <param name="length">Length</param>
     /// <returns>Random string</returns>
-    public static string RandomString(string chars, int length)
+    public string RandomString(string chars, int length)
         => new string(Enumerable.Repeat(chars, length)
             .Select(s => s[Random.Next(s.Length)]).ToArray());
 }

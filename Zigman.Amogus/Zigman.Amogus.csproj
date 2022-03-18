@@ -3,6 +3,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0-windows</TargetFramework>
+        <PublishSingleFile>true</PublishSingleFile>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Title>Amogus Trojan</Title>
@@ -20,7 +21,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Zigman.Engine\Zigman.Engine.csproj" />
+        <ProjectReference Include="..\Zigman.Engine.Legacy\Zigman.Engine.Legacy.csproj" />
     </ItemGroup>
 
     <ItemGroup>
