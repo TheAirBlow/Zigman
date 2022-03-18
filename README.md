@@ -1,3 +1,9 @@
+![badges](https://img.shields.io/github/contributors/TheAirBlow/Zigman.svg)
+![badges](https://img.shields.io/github/forks/TheAirBlow/Zigman.svg)
+![badges](https://img.shields.io/github/stars/TheAirBlow/Zigman.svg)
+![badges](https://img.shields.io/github/issues/TheAirBlow/Zigman.svg)
+[![Build CI](https://github.com/TheAirBlow/Zigman/actions/workflows/dotnet.yml/badge.svg)](https://github.com/TheAirBlow/Zigman/actions/workflows/dotnet.yml)
+
 # Zigman
 Zigman allows you to create GDI malware and also destroy the MBR, Partition Table and the Registry. \
 Written in C#. Manages payloads and threads for you. Also has a lot of P/Invokes builtin.
