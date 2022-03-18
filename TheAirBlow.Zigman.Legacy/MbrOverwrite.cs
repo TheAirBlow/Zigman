@@ -5,7 +5,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace Zigman.Engine.Legacy;
+namespace TheAirBlow.Zigman.Legacy;
 
 /// <summary>
 /// Overwrite MBR

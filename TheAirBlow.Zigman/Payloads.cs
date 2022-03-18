@@ -7,11 +7,11 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Timers;
 using Spectre.Console;
-using Zigman.Engine.Attributes;
-using Zigman.Engine.Exceptions;
+using TheAirBlow.Zigman.Attributes;
+using TheAirBlow.Zigman.Exceptions;
 using Timer = System.Timers.Timer;
 
-namespace Zigman.Engine;
+namespace TheAirBlow.Zigman;
 
 /// <summary>
 /// Payloads manager.

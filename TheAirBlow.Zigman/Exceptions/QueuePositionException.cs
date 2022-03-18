@@ -3,22 +3,20 @@
 // License, v2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using System;
+namespace TheAirBlow.Zigman.Exceptions;
 
-namespace Zigman.Engine.Exceptions;
-
-public class InvalidPayloadException : Exception
+public class QueuePositionException : Exception
 {
-    public InvalidPayloadException()
+    public QueuePositionException()
     {
     }
 
-    public InvalidPayloadException(string msg)
+    public QueuePositionException(string msg)
         : base(msg)
     {
     }
 
-    public InvalidPayloadException(string msg, Exception inner)
+    public QueuePositionException(string msg, Exception inner)
         : base(msg, inner)
     {
     }

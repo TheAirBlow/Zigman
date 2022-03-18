@@ -8,7 +8,7 @@ using System.Net.Mime;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace Zigman.Engine.Legacy;
+namespace TheAirBlow.Zigman.Legacy;
 
 /// <summary>
 /// Wallpaper changer

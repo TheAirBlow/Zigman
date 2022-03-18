@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 
-namespace Zigman.Engine.Legacy;
+namespace TheAirBlow.Zigman.Legacy;
 
 /// <summary>
 /// Win32 API imports

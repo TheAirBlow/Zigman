@@ -5,7 +5,7 @@
 
 using Timer = System.Timers.Timer;
 
-namespace Zigman.Engine.Legacy;
+namespace TheAirBlow.Zigman.Legacy;
 
 /// <summary>
 /// Payload queue

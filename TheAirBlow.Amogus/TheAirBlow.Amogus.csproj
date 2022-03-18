@@ -21,7 +21,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Zigman.Engine.Legacy\Zigman.Engine.Legacy.csproj" />
+        <ProjectReference Include="..\TheAirBlow.Zigman.Legacy\TheAirBlow.Zigman.Legacy.csproj" />
     </ItemGroup>
 
     <ItemGroup>

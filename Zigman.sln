@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Engine.Legacy", "Zigman.Engine.Legacy\Zigman.Engine.Legacy.csproj", "{7D6D6FC6-BAA2-4314-A8C6-30A41959FED8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheAirBlow.Zigman.Legacy", "TheAirBlow.Zigman.Legacy\TheAirBlow.Zigman.Legacy.csproj", "{7D6D6FC6-BAA2-4314-A8C6-30A41959FED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Amogus", "Zigman.Amogus\Zigman.Amogus.csproj", "{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheAirBlow.Amogus", "TheAirBlow.Amogus\TheAirBlow.Amogus.csproj", "{DC1366EC-1FB1-4EAD-A8FE-F3635C52B6FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zigman.Engine", "Zigman.Engine\Zigman.Engine.csproj", "{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheAirBlow.Zigman", "TheAirBlow.Zigman\TheAirBlow.Zigman.csproj", "{AB77A2D1-3BEA-496F-B18B-C61B12FF2BDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

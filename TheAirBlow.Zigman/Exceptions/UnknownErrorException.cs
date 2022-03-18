@@ -3,20 +3,20 @@
 // License, v2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-namespace Zigman.Engine.Exceptions;
+namespace TheAirBlow.Zigman.Exceptions;
 
-public class QueuePositionException : Exception
+public class UnknownErrorException : Exception
 {
-    public QueuePositionException()
+    public UnknownErrorException()
     {
     }
 
-    public QueuePositionException(string msg)
+    public UnknownErrorException(string msg)
         : base(msg)
     {
     }
 
-    public QueuePositionException(string msg, Exception inner)
+    public UnknownErrorException(string msg, Exception inner)
         : base(msg, inner)
     {
     }

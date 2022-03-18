@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Reflection;
 using Spectre.Console;
 
-namespace Zigman.Engine;
+namespace TheAirBlow.Zigman;
 
 /// <summary>
 /// Manage the ThreadPool

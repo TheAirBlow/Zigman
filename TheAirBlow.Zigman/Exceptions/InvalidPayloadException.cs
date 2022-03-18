@@ -5,20 +5,20 @@
 
 using System;
 
-namespace Zigman.Engine.Exceptions;
+namespace TheAirBlow.Zigman.Exceptions;
 
-public class IdentifierException : Exception
+public class InvalidPayloadException : Exception
 {
-    public IdentifierException()
+    public InvalidPayloadException()
     {
     }
 
-    public IdentifierException(string msg)
+    public InvalidPayloadException(string msg)
         : base(msg)
     {
     }
 
-    public IdentifierException(string msg, Exception inner)
+    public InvalidPayloadException(string msg, Exception inner)
         : base(msg, inner)
     {
     }

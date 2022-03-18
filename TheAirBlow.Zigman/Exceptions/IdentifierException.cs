@@ -3,20 +3,22 @@
 // License, v2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-namespace Zigman.Engine.Exceptions;
+using System;
 
-public class UnknownErrorException : Exception
+namespace TheAirBlow.Zigman.Exceptions;
+
+public class IdentifierException : Exception
 {
-    public UnknownErrorException()
+    public IdentifierException()
     {
     }
 
-    public UnknownErrorException(string msg)
+    public IdentifierException(string msg)
         : base(msg)
     {
     }
 
-    public UnknownErrorException(string msg, Exception inner)
+    public IdentifierException(string msg, Exception inner)
         : base(msg, inner)
     {
     }
