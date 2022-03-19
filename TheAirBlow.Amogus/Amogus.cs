@@ -5,17 +5,14 @@
 
 using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Media;
-using System.Windows.Forms;
-using TheAirBlow.Zigman.Legacy;
 
 namespace TheAirBlow.Amogus;
 
-public class Amogus : Trojan
+public class Amogus
 {
-    public override void UserInit()
+    public void UserInit()
     {
+        /*
         // Load assets
         AddAsset("sfx_amogus", new SoundPlayer(Path.Combine(Directory.GetCurrentDirectory(), "assets\\sfx_amogus.wav")));
         AddAsset("music_amogus", new SoundPlayer(Path.Combine(Directory.GetCurrentDirectory(), "assets\\music_amogus.wav")));
@@ -471,5 +468,6 @@ public class Amogus : Trojan
         EnqueuePayload("kill", 60000);
         // Start payload queue
         StartQueue(1);
+        */
     }
 }

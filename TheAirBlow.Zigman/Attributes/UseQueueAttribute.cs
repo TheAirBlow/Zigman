@@ -17,7 +17,7 @@ public class UseQueueAttribute : Attribute
     /// Delay before next payload, in milliseconds.
     /// In case of a sub-payloads, it would wait
     /// until the sub-payloads' queue would end,
-    /// and then wait for DelayBeforeNext.
+    /// and then wait for DelayBeforeNext
     /// </summary>
     public int DelayBeforeNext;
 

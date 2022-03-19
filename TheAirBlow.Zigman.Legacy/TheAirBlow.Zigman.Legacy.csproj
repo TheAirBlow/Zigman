@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NAudio.WinForms" Version="2.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Update="Imports.cs">
         <DependentUpon>Trojan.cs</DependentUpon>
       </Compile>

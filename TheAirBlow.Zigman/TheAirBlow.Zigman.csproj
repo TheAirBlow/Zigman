@@ -13,11 +13,27 @@
         <PackageLicenseUrl>https://github.com/TheAirBlow/Zigman/blob/main/LICENCE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/TheAirBlow/Zigman/</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>gdi malware</PackageTags>
+        <PackageTags>gdi engine</PackageTags>
+        <UseWindowsForms>True</UseWindowsForms>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="PInvoke.Kernel32" Version="0.7.104" />
+      <PackageReference Include="PInvoke.User32" Version="0.7.104" />
       <PackageReference Include="Spectre.Console" Version="0.43.0" />
+      <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Wallpapers.cs">
+        <DependentUpon>Payloads.cs</DependentUpon>
+      </Compile>
+      <Compile Update="MbrOverwrite.cs">
+        <DependentUpon>Payloads.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Invokes.cs">
+        <DependentUpon>Payloads.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

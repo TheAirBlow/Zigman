@@ -3,23 +3,23 @@
 // License, v2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-using TheAirBlow.Zigman.Legacy;
+using TheAirBlow.Zigman;
+using TheAirBlow.Zigman.Audio;
 
 namespace TheAirBlow.Amogus
 {
     public static class Program
     {
+        public static AudioManager Manager = new();
+        
         public static void Main(string[] args)
         {
-            var amogus = new Amogus {
-                Configuration = new Trojan.ConfigurationClass {
-                    CountOfThreads = 10,
-                    Creator = "TheAirBlow",
-                    Name = "Amogus Trojan",
-                    HideWindowAfterWarning = false
-                }
+            var trojan = new Trojan {
+                Title = "Amogus Trojan",
+                Author = "TheAirBlow"
             };
-            amogus.Start();
+            trojan.RegisterClass<AllPayloads>();
+            trojan.Run();
         }
     }
 }

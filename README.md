@@ -6,7 +6,7 @@
 
 # Zigman
 Zigman allows you to create GDI malware and also destroy the MBR, Partition Table and the Registry. \
-Written in C#. Manages payloads and threads for you. Also has a lot of P/Invokes builtin.
+Written in C#. Manages payloads and threads for you. It even has some P/Invokes builtin.
 
 ## Disclaimer
 This is only for educational purposes. \

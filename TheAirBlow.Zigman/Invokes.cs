@@ -8,12 +8,13 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 
-namespace TheAirBlow.Zigman.Legacy;
+namespace TheAirBlow.Zigman;
 
 /// <summary>
-/// Win32 API imports
+/// Additional Win32 API P/Invokes
+/// that are missing in the PInvokes
 /// </summary>
-public partial class Trojan
+public partial class Payloads
 {
     [DllImport("gdi32.dll")]
     public static extern bool Rectangle(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);

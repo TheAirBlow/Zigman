@@ -4,17 +4,16 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 using System.Diagnostics.CodeAnalysis;
-using System.Net.Mime;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace TheAirBlow.Zigman.Legacy;
+namespace TheAirBlow.Zigman;
 
 /// <summary>
 /// Wallpaper changer
 /// </summary>
 [SuppressMessage("Interoperability", "CA1416", MessageId = "Проверка совместимости платформы")]
-public partial class Trojan
+public partial class Payloads
 {
     [DllImport("user32.dll", CharSet = CharSet.Unicode)]
     private static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);

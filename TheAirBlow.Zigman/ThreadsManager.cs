@@ -50,9 +50,24 @@ internal class ThreadsManager
     private int _threadsCount = 0;
     
     /// <summary>
+    /// How many threads were already used?
+    /// </summary>
+    private int _threadsUsed;
+    
+    /// <summary>
+    /// How many threads were already used?
+    /// </summary>
+    private int _threadsStopped;
+    
+    /// <summary>
     /// Flag all threads for shutdown
     /// </summary>
-    public volatile bool Shutdown = false;
+    public volatile bool Shutdown;
+    
+    /// <summary>
+    /// Did the shutdown get finished?
+    /// </summary>
+    public volatile bool ShutdownDone;
 
     /// <summary>
     /// Create a new instance of the ThreadsManager
@@ -60,11 +75,10 @@ internal class ThreadsManager
     /// <param name="threadsCount">Amount of threads</param>
     internal ThreadsManager(int threadsCount)
     {
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Initializing ThreadsManager...");
+        AnsiConsole.MarkupLine("[chartreuse1][[Constructor]][/] [grey]INFO:[/] Initializing...");
         _threadsCount = threadsCount;
-        ThreadPool.SetMaxThreads(_threadsCount,
-            _threadsCount);
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Initialization done!");
+        ThreadPool.SetMaxThreads(_threadsCount, _threadsCount);
+        AnsiConsole.MarkupLine("[chartreuse1][[Constructor]][/] [grey]INFO:[/] Done!");
     }
 
     /// <summary>
@@ -74,7 +88,7 @@ internal class ThreadsManager
     /// <param name="payload">Payload to add</param>
     public void AddPayload(string id, Payloads.Payload payload)
     {
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Adding payload {id} to a thread...");
+        AnsiConsole.MarkupLine($"[chartreuse1][[AddPayload]][/] [grey]INFO:[/] Adding payload {id} to a thread...");
         CreateThread(); // Would do nothing if there are already enough threads
         
         lock (_threads) {
@@ -109,7 +123,7 @@ internal class ThreadsManager
             
             _payloadLocation.Add(id, thread.Identifier);
         }
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Payload {id} successfully added!");
+        AnsiConsole.MarkupLine($"[chartreuse1][[AddPayload]][/] [grey]INFO:[/] Payload {id} successfully added!");
     }
 
     /// <summary>
@@ -118,7 +132,7 @@ internal class ThreadsManager
     /// <param name="id">Payload's Identifier</param>
     public void RemovePayload(string id)
     {
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Removing payload {id}...");
+        AnsiConsole.MarkupLine($"[chartreuse1][[RemovePayload]][/] [grey]INFO:[/] Removing payload {id}...");
         lock (_threads) {
             var threadId = _payloadLocation[id];
             
@@ -137,7 +151,7 @@ internal class ThreadsManager
             _threads[threadId].Payloads.Remove(id);
             _threads[threadId].Dirty = true;
         }
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Payload {id} successfully removed!");
+        AnsiConsole.MarkupLine($"[chartreuse1][[RemovePayload]][/] [grey]INFO:[/] Payload {id} successfully removed!");
     }
 
     /// <summary>
@@ -145,7 +159,7 @@ internal class ThreadsManager
     /// </summary>
     public void StopAllThreads()
     {
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] Shutting down all threads...");
+        AnsiConsole.MarkupLine($"[chartreuse1][[StopAllThreads]][/] [grey]INFO:[/] Shutting down all threads...");
 
         var watch = new Stopwatch();
         watch.Start();
@@ -160,12 +174,15 @@ internal class ThreadsManager
          * inside of the lock, then we
          * would cause a deadlock.
          */
-        var done = false;
-        while (!done)
-            lock (_threads)
-                done = _threads.Count == 0;
+        var count = 0;
+        lock (_threads) 
+            count = _threads.Count;
+        
+        while (!ShutdownDone)
+            ShutdownDone = _threads.Count == _threadsStopped;
+        
         watch.Stop();
-        AnsiConsole.MarkupLine($"[grey]INFO:[/] All threads stopped in {watch.Elapsed}!");
+        AnsiConsole.MarkupLine($"[chartreuse1][[StopAllThreads]][/] [grey]INFO:[/] All threads stopped in {watch.Elapsed}!");
     }
 
     /// <summary>
@@ -173,16 +190,17 @@ internal class ThreadsManager
     /// </summary>
     private void CreateThread()
     {
+        if (_threadsUsed >= _threadsCount)
+            return;
+        var id = _threadsUsed;
         lock (_threads) {
-            if (_threads.Count + 1 > _threadsCount)
-                return;
-            
-            AnsiConsole.MarkupLine($"[grey]INFO:[/] Creating a new thread...");
-            var id = _threads.Count;
-            ThreadPool.QueueUserWorkItem(ThreadRoutine, id);
-            
-            AnsiConsole.MarkupLine($"[grey]INFO:[/] Finished successfully!");
+            AnsiConsole.MarkupLine($"[chartreuse1][[CreateThread]][/] [grey]INFO:[/] Creating a new thread (ID {id})...");
+            _threads.Add(id, new ThreadInfo { Identifier = id });
         }
+        
+        new Thread(() => ThreadRoutine(id)).Start();
+        AnsiConsole.MarkupLine($"[chartreuse1][[CreateThread]][/] [grey]INFO:[/] Finished successfully!");
+        _threadsUsed++;
     }
 
     /// <summary>
@@ -194,13 +212,12 @@ internal class ThreadsManager
         var id = (int)stateInfo!;
 
         void LogInfo(string msg)
-            => AnsiConsole.MarkupLine($"[aqua]Thread {id}[/] [grey]INFO:[/] {msg}");
+            => AnsiConsole.MarkupLine($"[chartreuse1][[Thread {id}]][/] [grey]INFO:[/] {msg}");
 
         void LogError(string msg)
-            => AnsiConsole.MarkupLine($"[aqua]Thread {id}[/] [red]ERROR:[/] {msg}");
+            => AnsiConsole.MarkupLine($"[chartreuse1][[Thread {id}]][/] [red]ERROR:[/] {msg}");
         
-        LogInfo($"Assigned Thread ID {id}");
-        lock (_threads) _threads[id].Identifier = id;
+        LogInfo($"Thread started!");
         Dictionary<string, Payloads.Payload> payloads = new();
         try {
             while (!Shutdown) {
@@ -218,21 +235,25 @@ internal class ThreadsManager
                 
                 foreach (var i in payloads) {
                     if (i.Value.IsSubPayloads) {
+                        i.Value.Payloads.StartQueue();
                         while (i.Value.Payloads.GetQueueLength() != 0) { }
                         await Task.Delay(i.Value.UseQueueAttribute.DelayBeforeNext);
-                        
+                        i.Value.Payloads.StopAllPayloads();
                         lock (_threads) _threads[id].Payloads.Remove(i.Key);
                         continue;
                     }
                     
-                    try { i.Value.Method.Invoke(null, null); }
+                    try { i.Value.Method.Invoke(i.Value.Payloads, null); }
                     catch (Exception e) {
                         LogError($"An exception occured while running {i.Key}!");
                         AnsiConsole.WriteException(e);
                     }
                     
                     if (i.Value.PayloadAttribute.RunOnce)
-                        lock (_threads) _threads[id].Payloads.Remove(i.Key);
+                        lock (_threads) {
+                            _threads[id].Payloads.Remove(i.Key);
+                            payloads.Remove(i.Key);
+                        }
                 }
             }
         } catch (Exception e) {
@@ -241,6 +262,6 @@ internal class ThreadsManager
         }
         
         LogInfo("Shutting down...");
-        lock(_threads) _threads.Remove(id);
+        _threadsStopped++;
     }
 }
