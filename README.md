@@ -25,7 +25,7 @@ It looks very cool (and sus, too). Download it on the Releases tab.
 ## Screenshots
 ![изображение](https://user-images.githubusercontent.com/68467762/159150710-790e0943-d70c-4fd9-a3ea-807bea69bae9.png)
 ![изображение](https://user-images.githubusercontent.com/68467762/159150722-65560332-06a7-4111-a19f-ff1f2d8dadee.png)
-![изображение](https://user-images.githubusercontent.com/68467762/159150708-a8cbdc51-8123-4127-9977-2be895825211.png)
+![изображение](https://user-images.githubusercontent.com/68467762/159151118-ff8506c4-fdca-4441-960a-47555c3c28b0.png)
 ![изображение](https://user-images.githubusercontent.com/68467762/159150705-42a10d89-8e95-4871-9b60-fd566426f061.png)
 
 ## Credits
