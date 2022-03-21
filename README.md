@@ -23,10 +23,33 @@ It is a trojan, that uses Zigman Engine. An example, sort of. \
 It looks very cool (and sus, too). Download it on the Releases tab.
 
 ## Screenshots
-![изображение](https://user-images.githubusercontent.com/68467762/159150710-790e0943-d70c-4fd9-a3ea-807bea69bae9.png)
-![изображение](https://user-images.githubusercontent.com/68467762/159150722-65560332-06a7-4111-a19f-ff1f2d8dadee.png)
-![изображение](https://user-images.githubusercontent.com/68467762/159151118-ff8506c4-fdca-4441-960a-47555c3c28b0.png)
-![изображение](https://user-images.githubusercontent.com/68467762/159150705-42a10d89-8e95-4871-9b60-fd566426f061.png)
+<details>
+  <summary>Phase 1: LSD and Mushrooms</summary>
+  <br>
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239285-4901d365-a596-4d0f-8678-7a0d7fb4fba6.png)
+</details>
+<details>
+  <summary>Phase 2: Squishy Screen</summary>
+  <br>
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239438-921bed75-2254-404f-88e0-ec90502bb1c2.png)
+</details>
+<details>
+  <summary>Phase 3: Crazy shit and le Solaris Octagon</summary>
+  <br>
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239719-99e20e15-d1a0-46db-8598-de164b9fff5a.png)
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239462-85d93889-659c-4643-abbc-22cecfc4e1e9.png)
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239756-6170df96-1905-4091-9bb8-e8dcc79b7a63.png)
+</details>
+<details>
+  <summary>Phase 4: Stretching and le Solaris Triangle</summary>
+  <br>
+  ![изображение](https://user-images.githubusercontent.com/68467762/159239681-c955a286-5c57-4a8f-90d6-c4b1418bdfa2.png)
+</details>
+<details>
+  <summary>Phase 5: Christmas, Shaking and le Solaris Rectangle</summary>
+  <br>
+  
+</details>
 
 ## Credits
 [TheAirBlow](https://github.com/theairblow) for Zigman Engine and Amogus Trojan.
