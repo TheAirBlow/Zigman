@@ -8,25 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Audio/AudioManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Exceptions/InvalidClassException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Trojan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase3.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase4.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase5.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/Amogus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Amogus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Imports.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/MbrOverwrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/MbrOverwrite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/TheAirBlow.Zigman.Legacy.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/TheAirBlow.Zigman.Legacy.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Wallpapers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Wallpapers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/UseQueueAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Attributes/UseQueueAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/SymbolExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zigman.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Zigman.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +35,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Trojan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Trojan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,13 +76,13 @@
   </component>
   <component name="RunManager" selected=".NET Project.Zigman.Amogus">
     <configuration name="Zigman.Amogus Publish" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/publish" target_framework="net6.0-windows" uuid_high="-2588612196477874515" uuid_low="-6269306023176915204" />
+      <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" target_folder="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/publish" target_framework="net6.0-windows" uuid_high="-2588612196477874515" uuid_low="-6269306023176915204" />
       <method v="2" />
     </configuration>
     <configuration name="Zigman.Amogus" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/Zigman.Amogus.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/TheAirBlow.Amogus/bin/Release/net6.0-windows/TheAirBlow.Amogus.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TheAirBlow.Amogus/bin/Release/net6.0-windows" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -146,7 +141,13 @@
       <workItem from="1647581698672" duration="17312000" />
       <workItem from="1647611015949" duration="6404000" />
       <workItem from="1647661178162" duration="5922000" />
-      <workItem from="1647667515389" duration="14982000" />
+      <workItem from="1647667515389" duration="15153000" />
+      <workItem from="1647756235808" duration="640000" />
+      <workItem from="1647776311888" duration="8639000" />
+      <workItem from="1647793246864" duration="4968000" />
+      <workItem from="1647798867028" duration="3832000" />
+      <workItem from="1647848740132" duration="4766000" />
+      <workItem from="1647854681553" duration="2810000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -183,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647597997244</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="The official release of rewritten Zigman, including rewritten Amogus Trojan!">
+      <created>1647684741918</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647684741919</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +219,7 @@
     <MESSAGE value="Prepare for NuGet" />
     <MESSAGE value="Make sure there would not be any conflicts on pull" />
     <MESSAGE value="Fix the NuGet Package's Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix the NuGet Package's Version" />
+    <MESSAGE value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
+    <option name="LAST_COMMIT_MESSAGE" value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
   </component>
 </project>

@@ -193,6 +193,7 @@ internal class ThreadsManager
         if (_threadsUsed >= _threadsCount)
             return;
         var id = _threadsUsed;
+        _threadsUsed++;
         lock (_threads) {
             AnsiConsole.MarkupLine($"[chartreuse1][[CreateThread]][/] [grey]INFO:[/] Creating a new thread (ID {id})...");
             _threads.Add(id, new ThreadInfo { Identifier = id });
@@ -200,7 +201,7 @@ internal class ThreadsManager
         
         new Thread(() => ThreadRoutine(id)).Start();
         AnsiConsole.MarkupLine($"[chartreuse1][[CreateThread]][/] [grey]INFO:[/] Finished successfully!");
-        _threadsUsed++;
+        
     }
 
     /// <summary>
@@ -239,7 +240,10 @@ internal class ThreadsManager
                         while (i.Value.Payloads.GetQueueLength() != 0) { }
                         await Task.Delay(i.Value.UseQueueAttribute.DelayBeforeNext);
                         i.Value.Payloads.StopAllPayloads();
-                        lock (_threads) _threads[id].Payloads.Remove(i.Key);
+                        lock (_threads) {
+                            _threads[id].Payloads.Remove(i.Key);
+                            payloads.Remove(i.Key);
+                        }
                         continue;
                     }
                     
@@ -259,6 +263,7 @@ internal class ThreadsManager
         } catch (Exception e) {
             LogError($"Thread's routine crashed!");
             AnsiConsole.WriteException(e);
+            _threadsUsed--;
         }
         
         LogInfo("Shutting down...");

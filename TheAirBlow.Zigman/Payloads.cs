@@ -84,33 +84,9 @@ public partial class Payloads
     protected readonly Random Random = new();
 
     /// <summary>
-    /// Modify IDs for this Payloads instance
-    /// to be formatted properly.
+    /// Is this Payloads sub?
     /// </summary>
-    internal void ModifyIds()
-    {
-        // Why is this even required? It is because
-        // the ThreadsManager is shared among all
-        // of the sub-threads, and there may be
-        // payloads with same IDs inside different
-        // Payloads classes.
-        SubPayloadsPrefix = $"SubPayload{SubPayloadsCount}.";
-        AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/ModifyIds]][/] [grey]INFO:[/] Prefix: {SubPayloadsPrefix}");
-        var toReplace = new Dictionary<string, string>();
-        foreach (var i in _payloads) {
-            var newId = $"{SubPayloadsPrefix}{i.Value.PayloadAttribute.Identifier}";
-            i.Value.PayloadAttribute.Identifier = newId;
-            toReplace.Add(i.Key, newId);
-        }
-        
-        foreach (var i in toReplace) {
-            var value = _payloads[i.Key];
-            _payloads.Remove(i.Key);
-            _payloads.Add(i.Value, value);
-        }
-        
-        SubPayloadsCount++;
-    }
+    private bool IsSubPayloads;
 
     /// <summary>
     /// Set the settings to use
@@ -128,6 +104,11 @@ public partial class Payloads
     /// </summary>
     internal void Initialize(List<Type>? classes = null)
     {
+        if (IsSubPayloads) {
+            SubPayloadsPrefix = $"SubPayload{SubPayloadsCount}.";
+            AnsiConsole.MarkupLine($"[lightskyblue3_1][[[underline]{GetType().Name}[/]/ModifyIds]][/] [grey]INFO:[/] Prefix: {SubPayloadsPrefix}");
+        }
+        
         DisplayGraphics = Graphics.FromHdc(DisplayHandle);
         classes ??= new List<Type> { GetType() };
         var watch = new Stopwatch();
@@ -183,7 +164,8 @@ public partial class Payloads
             }
             
             // Process sub-payloads
-            if (i.ReturnType.IsSubclassOf(typeof(Payloads))) {
+            if (i.ReturnType.IsSubclassOf(typeof(Payloads))
+                || i.ReturnType == typeof(Payloads)) {
                 // Get the return value
                 var obj = i.Invoke(this, null);
                 if (obj == null) 
@@ -192,7 +174,8 @@ public partial class Payloads
                 
                 // Setup the Payloads instance
                 value.SetSettings(_manager, _level);
-                value.Initialize(); value.ModifyIds();
+                value.IsSubPayloads = true;
+                value.Initialize();
                 
                 // Make the thread wait until the Payload's queue gets emptied
                 payload.IsSubPayloads = true;

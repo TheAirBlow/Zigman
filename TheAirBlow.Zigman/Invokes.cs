@@ -7,8 +7,18 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
+using PInvoke;
 
 namespace TheAirBlow.Zigman;
+
+public static class Extensions
+{
+    public static Point[] ToPoint(this Payloads.POINT[] points)
+        => points.Select(x => new Point(x.X, x.Y)).ToArray();
+    
+    public static Payloads.POINT[] ToNativePoint(this Point[] points)
+        => points.Select(x => new Payloads.POINT(x.X, x.Y)).ToArray();
+}
 
 /// <summary>
 /// Additional Win32 API P/Invokes
@@ -17,8 +27,76 @@ namespace TheAirBlow.Zigman;
 public partial class Payloads
 {
     [DllImport("gdi32.dll")]
-    public static extern bool Rectangle(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
+    public static extern bool InvertRgn(IntPtr hdc, IntPtr hrgn);
     
+    [DllImport("user32.dll")]
+    public static extern bool InvalidateRect(IntPtr hWnd, IntPtr lpRect, bool bErase);
+
+    [DllImport("gdi32.dll")]
+    public static extern IntPtr CreatePolygonRgn(POINT [] lppt, int cPoints,
+        int fnPolyFillMode);
+    
+    [DllImport("gdi32.dll")]
+    public static extern int SelectClipRgn(IntPtr hdc, IntPtr hrgn);
+    
+    [DllImport("gdi32.dll", ExactSpelling=true, PreserveSig=true, SetLastError=true)]
+    public static extern bool Ellipse(IntPtr hdc, int nLeftRect, int nTopRect,
+        int nRightRect, int nBottomRect);
+    
+    [DllImport("gdi32.dll")]
+    public static extern bool Polygon(IntPtr hdc, POINT[] lpPoints, int nCount);
+    
+    /// <summary>
+    ///    Performs a bit-block transfer of the color data corresponding to a
+    ///    rectangle of pixels from the specified source device context into
+    ///    a destination device context.
+    /// </summary>
+    /// <param name="hdc">Handle to the destination device context.</param>
+    /// <param name="nXDest">The leftmost x-coordinate of the destination rectangle (in pixels).</param>
+    /// <param name="nYDest">The topmost y-coordinate of the destination rectangle (in pixels).</param>
+    /// <param name="nWidth">The width of the source and destination rectangles (in pixels).</param>
+    /// <param name="nHeight">The height of the source and the destination rectangles (in pixels).</param>
+    /// <param name="hdcSrc">Handle to the source device context.</param>
+    /// <param name="nXSrc">The leftmost x-coordinate of the source rectangle (in pixels).</param>
+    /// <param name="nYSrc">The topmost y-coordinate of the source rectangle (in pixels).</param>
+    /// <param name="dwRop">A raster-operation code.</param>
+    /// <returns>
+    ///    <c>true</c> if the operation succeedes, <c>false</c> otherwise. To get extended error information, call <see cref="System.Runtime.InteropServices.Marshal.GetLastWin32Error"/>.
+    /// </returns>
+    [DllImport("gdi32.dll", EntryPoint = "BitBlt", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool BitBlt([In] IntPtr hdc, int nXDest, int nYDest, int nWidth, int nHeight, [In] IntPtr hdcSrc, int nXSrc, int nYSrc, uint dwRop);
+    
+    /// <summary>
+    ///    Performs a bit-block transfer of the color data corresponding to a
+    ///    rectangle of pixels from the specified source device context into
+    ///    a destination device context.
+    /// </summary>
+    /// <param name="hdc">Handle to the destination device context.</param>
+    /// <param name="nXDest">The leftmost x-coordinate of the destination rectangle (in pixels).</param>
+    /// <param name="nYDest">The topmost y-coordinate of the destination rectangle (in pixels).</param>
+    /// <param name="nWidth">The width of the source and destination rectangles (in pixels).</param>
+    /// <param name="nHeight">The height of the source and the destination rectangles (in pixels).</param>
+    /// <param name="hdcSrc">Handle to the source device context.</param>
+    /// <param name="nXSrc">The leftmost x-coordinate of the source rectangle (in pixels).</param>
+    /// <param name="nYSrc">The topmost y-coordinate of the source rectangle (in pixels).</param>
+    /// <param name="dwRop">A raster-operation code.</param>
+    /// <returns>
+    ///    <c>true</c> if the operation succeedes, <c>false</c> otherwise. To get extended error information, call <see cref="System.Runtime.InteropServices.Marshal.GetLastWin32Error"/>.
+    /// </returns>
+    [DllImport("gdi32.dll", EntryPoint = "BitBlt", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool BitBlt([In] IntPtr hdc, int nXDest, int nYDest, int nWidth, int nHeight, [In] IntPtr hdcSrc, int nXSrc, int nYSrc, RasterOperation dwRop);
+    
+    [DllImport("gdi32.dll")]
+    public static extern bool PatBlt(IntPtr hdc, int nXLeft, int nYLeft, int nWidth, int nHeight, uint dwRop);
+
+    [DllImport("gdi32.dll")]
+    public static extern bool PatBlt(IntPtr hdc, int nXLeft, int nYLeft, int nWidth, int nHeight, RasterOperation dwRop);
+    
+    [DllImport("gdi32.dll")]
+    public static extern bool Rectangle(IntPtr hdc, int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
+
     [StructLayout(LayoutKind.Sequential)]
     public struct POINT
     {
