@@ -8,17 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/Phase5.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/TheAirBlow.Amogus.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +26,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Invokes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/ThreadsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Payloads.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman/Trojan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Amogus/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TheAirBlow.Zigman.Legacy/Trojan.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TheAirBlow/RiderProjects/Zigman/TheAirBlow.Amogus/AllPayloads.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -147,7 +135,8 @@
       <workItem from="1647793246864" duration="4968000" />
       <workItem from="1647798867028" duration="3832000" />
       <workItem from="1647848740132" duration="4766000" />
-      <workItem from="1647854681553" duration="2810000" />
+      <workItem from="1647854681553" duration="3200000" />
+      <workItem from="1647858451937" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -191,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647684741919</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads">
+      <created>1647857820777</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647857820777</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +216,7 @@
     <MESSAGE value="Make sure there would not be any conflicts on pull" />
     <MESSAGE value="Fix the NuGet Package's Version" />
     <MESSAGE value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
-    <option name="LAST_COMMIT_MESSAGE" value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
+    <MESSAGE value="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads" />
+    <option name="LAST_COMMIT_MESSAGE" value="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads" />
   </component>
 </project>

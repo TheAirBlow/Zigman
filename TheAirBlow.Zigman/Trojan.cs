@@ -73,10 +73,11 @@ public class Trojan
     {
         if (_started)
             throw new InvalidOperationException("Cannot run the Zigman Engine: " +
-                                                "it is already running at this time!");
+                                                "it is already running!");
         _started = true; var first = _payloads[0];
         
         // Spectre.Console, thank you, very cool!
+        Console.Title = $"{Title} by {Author} | Powered by Zigman Engine";
         var panel = new Panel(new FigletText(Title).LeftAligned().Color(Color.Green).Centered()) {
             Header = new PanelHeader($"[dodgerblue2]$ Created by the only [deepskyblue2]{Author}[/] $[/]", Justify.Center),
             Border = BoxBorder.Rounded, Expand = false
