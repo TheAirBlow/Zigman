@@ -43,7 +43,7 @@ It looks very cool (and sus, too). Download it on the Releases tab.
 <details>
   <summary>Phase 4: Stretching and le Solaris Triangle</summary>
   <br>
-  <img src="https://user-images.githubusercontent.com/68467762/159239681-c955a286-5c57-4a8f-90d6-c4b1418bdfa2.png"/>
+  <img src="https://user-images.githubusercontent.com/68467762/159248014-15e87461-c8d0-4a4a-9861-7afcca3036f0.png"/>
 </details>
 <details>
   <summary>Phase 5: Christmas, Shaking and le Solaris Rectangle</summary>
