@@ -48,7 +48,9 @@ It looks very cool (and sus, too). Download it on the Releases tab.
 <details>
   <summary>Phase 5: Christmas, Shaking and le Solaris Rectangle</summary>
   <br>
-  
+  ![изображение](https://user-images.githubusercontent.com/68467762/159240314-c90f20c2-9d3a-4aa6-8370-2ac1906c8157.png)
+  ![изображение](https://user-images.githubusercontent.com/68467762/159240464-5572fc27-5e47-4229-90db-8f759678e0c5.png)
+  ![изображение](https://user-images.githubusercontent.com/68467762/159240594-828f28b8-808a-491d-8d61-7b8b6bdf1486.png)
 </details>
 
 ## Credits
