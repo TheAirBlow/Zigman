@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Zigman/TheAirBlow.Zigman.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="RiderCSharpFileTemplatesSettingsId" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.Zigman.Amogus">
@@ -136,7 +136,9 @@
       <workItem from="1647798867028" duration="3832000" />
       <workItem from="1647848740132" duration="4766000" />
       <workItem from="1647854681553" duration="3200000" />
-      <workItem from="1647858451937" duration="611000" />
+      <workItem from="1647858451937" duration="781000" />
+      <workItem from="1647868396430" duration="109000" />
+      <workItem from="1648398808167" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -187,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647857820777</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change the console's title (Zigman Engine)">
+      <created>1647859373922</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647859373922</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +226,7 @@
     <MESSAGE value="Fix the NuGet Package's Version" />
     <MESSAGE value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
     <MESSAGE value="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads" />
-    <option name="LAST_COMMIT_MESSAGE" value="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads" />
+    <MESSAGE value="Change the console's title (Zigman Engine)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the console's title (Zigman Engine)" />
   </component>
 </project>

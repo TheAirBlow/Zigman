@@ -27,8 +27,8 @@ public class AllPayloads : Payloads
         _monke = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "assets\\img_monke.png"));
         _amogus = Image.FromFile(Path.Combine(Directory.GetCurrentDirectory(), "assets\\img_amogus.png"));
         
-        //var path = Path.Combine(Directory.GetCurrentDirectory(), "assets\\music_amogus.wav");
-        //Program.Manager.PlayFile(path, true);
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "assets\\music_amogus.wav");
+        Program.Manager.PlayFile(path, true);
         
         SetWallpaper(Path.Combine(Directory.GetCurrentDirectory(),
             "assets\\img_wallpaper.jpg"), Style.Stretched);
