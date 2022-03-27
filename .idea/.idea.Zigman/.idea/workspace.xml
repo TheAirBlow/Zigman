@@ -7,7 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="">
+    <list default="true" id="0140bb77-135f-437a-af26-9774725f3413" name="Changes" comment="Upload to NuGet only if needed">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dotnet.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dotnet.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zigman/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TheAirBlow.Amogus/AllPayloads.cs" afterDir="false" />
     </list>
@@ -67,6 +68,24 @@
       <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" target_folder="$PROJECT_DIR$/Zigman.Amogus/bin/Release/net6.0-windows/publish" target_framework="net6.0-windows" uuid_high="-2588612196477874515" uuid_low="-6269306023176915204" />
       <method v="2" />
     </configuration>
+    <configuration name="TheAirBlow.Meh" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TheAirBlow.Meh/TheAirBlow.Meh.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Zigman.Amogus" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/TheAirBlow.Amogus/bin/Release/net6.0-windows/TheAirBlow.Amogus.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -88,6 +107,7 @@
     <list>
       <item itemvalue=".NET Project.Zigman.Amogus" />
       <item itemvalue="Publish to folder.Zigman.Amogus Publish" />
+      <item itemvalue=".NET Project.TheAirBlow.Meh" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -138,7 +158,7 @@
       <workItem from="1647854681553" duration="3200000" />
       <workItem from="1647858451937" duration="781000" />
       <workItem from="1647868396430" duration="109000" />
-      <workItem from="1648398808167" duration="52000" />
+      <workItem from="1648398808167" duration="403000" />
     </task>
     <task id="LOCAL-00001" summary="Halfway done new implementation of Zigman.Engine">
       <created>1647589651090</created>
@@ -227,6 +247,7 @@
     <MESSAGE value="The official release of rewritten Zigman, including rewritten Amogus Trojan!" />
     <MESSAGE value="A lot of changes, was lazy to split them&#10;&#10;1) A hotfix for Zigman Engine&#10;  * Fixed sub-payloads&#10;2) Split Amogus Trojan's Payloads into phases&#10;3) Added le Solaris Payloads&#10;  * Octagon, Rectangle and Triangle&#10;4) LSD and noise Payloads" />
     <MESSAGE value="Change the console's title (Zigman Engine)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the console's title (Zigman Engine)" />
+    <MESSAGE value="Upload to NuGet only if needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload to NuGet only if needed" />
   </component>
 </project>
